@@ -1,0 +1,26 @@
+---
+title: Templates
+description: One global _Template folder, structured by type rather than domain.
+---
+
+Templates stay in one global `_Template/` folder (not domain-nested), one per type:
+
+```
+_Template/
+  idea-template.md
+  knowledge-template.md
+  decision-template.md
+  assignment-template.md
+  lesson-entry-template.md
+```
+
+Templates are structured by **type**, not domain — the shape of a Decision entry (question,
+options considered, reasoning, conclusion) doesn't change based on domain, only the content
+does. [Cheatsheets](/supporting-types/) may not need a rigid template at all, since their format
+varies by topic.
+
+:::tip[Why global, not per-domain]
+If templates lived inside each domain, updating the Decision template shape would mean editing
+it in every domain folder. One global set means the shape of "a Decision" stays a single source
+of truth, independent of how many domains exist.
+:::

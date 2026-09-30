@@ -1,0 +1,28 @@
+---
+title: Naming convention
+description: How course-tied notes get prefixed, in filenames and in Lesson log headings.
+---
+
+Notes tied to a specific course get that course's one-word slug as a filename prefix, regardless
+of which type-folder they live in:
+
+```
+Electrical/Decision/micro-grid-inverter-topology.md
+Electrical/Decision/micro-grid-control-strategy.md
+Electrical/Decision/pcb-copper-vs-aluminium.md   ← not course-tied, general
+Electrical/Assignment/micro-grid-assignment-1.md
+Electrical/Assignment/micro-grid-assignment-2.md
+```
+
+[Lesson](/core-chain/lesson/) entries (headings inside the single `Lesson.md`, not separate
+files) carry the same prefix in the heading text:
+
+```markdown
+## micro-grid — Inverter topology reflections
+```
+
+:::tip
+Not every note needs a course prefix. `pcb-copper-vs-aluminium` above is a general Decision, not
+tied to any one course — leave the prefix off when the note is genuinely reusable outside the
+course that prompted it.
+:::

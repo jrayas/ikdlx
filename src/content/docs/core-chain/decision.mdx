@@ -1,0 +1,38 @@
+---
+title: Decision
+description: Knowledge + context + reasoning → a conclusion, reusable across multiple future assignments.
+---
+
+<span class="stage-badge stage-decision">Decision</span>
+
+A **Decision** is knowledge + context + reasoning → a conclusion. It's a specific question you
+had, and how you answered it (e.g. "copper vs aluminium for this PCB"). Reusable across multiple
+future assignments and courses, even though it started from one.
+
+- **Folder:** `<Domain>/Decision/`
+- **File structure:** one file per decision
+- **Nature:** context-bound reasoning
+
+## Shape of a Decision note
+
+A Decision entry typically records:
+
+1. The question you were actually trying to answer
+2. The options considered
+3. The reasoning that ruled options in or out
+4. The conclusion you reached
+
+```yaml
+---
+type: decision
+course: micro-grid   # optional — only if tied to a specific course
+date: 2026-10-01
+---
+```
+
+## Decisions vs. Assignments
+
+A Decision is **not** the deliverable itself — it's the reasoning behind one piece of it. An
+[Assignment](/supporting-types/#assignment) links out to the Decisions used to produce it rather
+than duplicating the reasoning inline. This is what lets one Decision (e.g.
+`pcb-copper-vs-aluminium`) get reused across several unrelated assignments later.

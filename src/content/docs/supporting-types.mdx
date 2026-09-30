@@ -1,0 +1,31 @@
+---
+title: The "x" types
+description: Supporting infrastructure that isn't part of the epistemic ladder itself, but supports it.
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+Everything that isn't part of the [Idea → Knowledge → Decision → Lesson](/core-chain/idea/)
+ladder itself, but supports it. These are only created inside a domain when that domain actually
+needs them — a domain with no coursework yet wouldn't need `Assignment/` or `Course/` at all.
+
+<CardGrid>
+	<Card title="Cheatsheet" icon="pencil">
+		Quick-recall reference material. Format varies by topic, so it may not need a rigid template
+		at all. **Folder:** `<Domain>/Cheatsheet/` · one file per topic.
+	</Card>
+	<Card title="Template" icon="document">
+		Reusable structures you fill in. Lives in the global `_Template/` folder, not
+		domain-nested — see [Templates](/templates/).
+	</Card>
+	<Card title="Assignment" icon="rocket">
+		A deliverable; a bundle of Decisions (and other work) produced for a course. Links out to the
+		Decisions used rather than duplicating reasoning. **Folder:** `<Domain>/Assignment/` · one
+		file per assignment.
+	</Card>
+	<Card title="Course" icon="seti:folder">
+		The materials a course gives you (lecture slides, unit outlines, etc.) — dumped flat, no
+		further nesting. Not your own output, so no `type`/`status` frontmatter needed the way
+		Idea/Knowledge/Decision have. **Folder:** `<Domain>/Course/<Name>/`.
+	</Card>
+</CardGrid>

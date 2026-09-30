@@ -1,0 +1,38 @@
+---
+title: Idea
+description: An unverified hunch or "what if" — volatile by nature, most either get promoted or discarded.
+---
+
+<span class="stage-badge stage-idea">Idea</span>
+
+An **Idea** is an unverified hunch or "what if." It's volatile by nature — most Ideas either get
+promoted (turn out to be true or useful) or discarded (checked and found wrong, or not worth
+pursuing).
+
+- **Folder:** `<Domain>/Idea/`
+- **File structure:** one file per idea
+- **Nature:** unverified, volatile
+
+## Status lifecycle
+
+Unlike Knowledge, Decision, or Lesson, an Idea carries a `status` field in its frontmatter that
+tracks where it is in its own life:
+
+| Status | Meaning |
+|---|---|
+| `open` | Still unverified, sitting there. |
+| `promoted` | Turned out true/useful, became a [Knowledge](/core-chain/knowledge/) or [Decision](/core-chain/decision/) entry. Link to that entry so you can trace "this idea became that fact." |
+| `discarded` | Checked it, it was wrong or not worth pursuing. **Keep the note anyway** — a wrong hunch is still useful data on your own instincts over time. |
+
+```yaml
+---
+type: idea
+status: open
+date: 2026-10-01
+---
+```
+
+:::note
+Discarded doesn't mean deleted. The value of an Idea log isn't just the hits — it's the honest
+record of what you guessed wrong, too.
+:::

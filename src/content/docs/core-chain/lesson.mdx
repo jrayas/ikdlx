@@ -1,0 +1,53 @@
+---
+title: Lesson
+description: A retrospective, honest, opinionated reflection — one running log per domain, not one file per entry.
+---
+
+<span class="stage-badge stage-lesson">Lesson</span>
+
+A **Lesson** is a retrospective, honest, opinionated reflection written *after* an assignment or
+concept is finished. Unlike the other three stages, Lesson lives as **one single running log per
+domain** — not one file per entry — with a table of contents at the top and chronological entries
+below, so it can be read quickly top to bottom.
+
+- **File:** `<Domain>/Lesson.md` (one file, not a folder)
+- **File structure:** one running log per domain
+- **Nature:** retrospective, honest
+
+## Log format
+
+```markdown
+# Lesson Log — Electrical
+
+## Contents
+- [[#2026-09 — micro-grid PMSG STATCOM Modelling]]
+- [[#2026-08 — PCB Trace Material Assignment]]
+
+---
+
+## 2026-09 — micro-grid PMSG STATCOM Modelling
+**What it was:** Group project on a PMSG wind system with STATCOM.
+**Key decisions used:** [[micro-grid-inverter-topology]], [[micro-grid-control-strategy]]
+**What I learned:** ...
+**Honest take:** ...
+**Confidence:** Medium — would revisit the control loop tuning if I did it again.
+
+---
+
+## 2026-08 — PCB Trace Material Assignment
+...
+```
+
+Pick newest-first or oldest-first for the ordering — either works, but **stay consistent** once
+you choose, since the table of contents depends on the order being predictable.
+
+## Naming inside the log
+
+Entries carry the same course-slug prefix used elsewhere in IKDLx, but in the heading text rather
+than a filename, since there's only one file per domain:
+
+```markdown
+## micro-grid — Inverter topology reflections
+```
+
+See [Naming convention](/naming-convention/) for the full prefix rule.

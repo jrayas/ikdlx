@@ -1,0 +1,14 @@
+---
+title: Cross-domain notes
+description: Where a concept that spans two domains should live, and how to handle deleting a domain.
+---
+
+When a concept genuinely spans two domains (e.g. STATCOM control theory touching both Electrical
+and Control Systems), it lives in whichever domain owns it primarily. Other domains reference it
+via a normal wikilink rather than duplicating the content.
+
+:::caution[Before deleting a domain folder]
+Check its backlinks first, since other domains may silently depend on notes inside it. Prefer
+**renaming** to `_Archive/<DomainName>/` over outright deletion, so a broken cross-domain link is
+a two-step, reversible mistake rather than a one-click permanent one.
+:::

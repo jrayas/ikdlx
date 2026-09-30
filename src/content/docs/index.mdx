@@ -1,0 +1,45 @@
+---
+title: What is IKDLx?
+description: A domain-first personal knowledge system for Obsidian, organised by how a thought matures.
+tableOfContents: false
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+**Idea → Knowledge → Decision → Lesson, plus x (extra/support types).**
+
+IKDLx is a domain-first personal knowledge system for Obsidian, built as an alternative to
+[PARA](/why-not-para/) — organised around *how a thought matures* (from hunch, to verified fact,
+to reasoned choice, to reflection) rather than around project lifecycle.
+
+## The core chain
+
+<div class="chain-strip">
+  <a class="idea" href="/ikdlx/core-chain/idea/">Idea<small>Unverified hunch</small></a>
+  <a class="knowledge" href="/ikdlx/core-chain/knowledge/">Knowledge<small>Confirmed fact</small></a>
+  <a class="decision" href="/ikdlx/core-chain/decision/">Decision<small>Reasoned choice</small></a>
+  <a class="lesson" href="/ikdlx/core-chain/lesson/">Lesson<small>Honest reflection</small></a>
+</div>
+
+1. <span class="stage-badge stage-idea">Idea</span> — an unverified hunch or "what if." Volatile by nature; most either get promoted or discarded.
+2. <span class="stage-badge stage-knowledge">Knowledge</span> — a confirmed, context-free fact. Stable, rarely rewritten, reusable forever.
+3. <span class="stage-badge stage-decision">Decision</span> — knowledge + context + reasoning → a conclusion. A specific question you had, and how you answered it.
+4. <span class="stage-badge stage-lesson">Lesson</span> — a retrospective, honest, opinionated reflection written *after* an assignment or concept is finished.
+
+## Why domain-first
+
+Domain (Electrical, Electronics, Mechatronics, etc.) is the top-level container, so everything about
+one domain is in one place. Type-folders (`Idea/`, `Knowledge/`, `Decision/`) nest **inside** each
+domain — domain isn't a frontmatter field, it's already expressed by folder location.
+
+<CardGrid>
+	<Card title="Read the reasoning" icon="open-book">
+		Start with [Why not PARA](/why-not-para/) to see the gap IKDLx is filling.
+	</Card>
+	<Card title="See the shape" icon="seti:folder">
+		Jump to [Folder structure](/folder-structure/) for the full directory layout.
+	</Card>
+	<Card title="Just the facts" icon="list-format">
+		Skim the [Quick reference](/quick-reference/) table for a one-screen summary.
+	</Card>
+</CardGrid>

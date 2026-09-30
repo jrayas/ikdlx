@@ -1,0 +1,29 @@
+---
+title: Frontmatter schema
+description: The full frontmatter fields used across IKDLx note types.
+---
+
+```yaml
+---
+type: decision        # idea | knowledge | decision | cheatsheet | assignment
+course: micro-grid     # optional — only if tied to a specific course
+status: open           # Idea only — open | promoted | discarded
+date: 2026-10-01
+---
+```
+
+| Field | Required | Applies to | Notes |
+|---|---|---|---|
+| `type` | Yes | Idea, Knowledge, Decision, Cheatsheet, Assignment | Matches the folder name exactly (lowercase, singular). |
+| `course` | No | Any type | Only set if the note is tied to a specific course — see [Naming convention](/naming-convention/). |
+| `status` | Idea only | Idea | `open`, `promoted`, or `discarded` — see [Idea status lifecycle](/core-chain/idea/#status-lifecycle). |
+| `date` | Yes | Any type | Capture or last-substantial-edit date. |
+
+:::note
+**Domain is not a frontmatter field** — it's already expressed by folder location, since domain
+is the top-level container. Don't duplicate it here.
+:::
+
+Course materials (`Course/<Name>/`) and Lesson log entries don't use this frontmatter schema at
+all — Course is a flat dump of given materials (not your own output), and Lesson lives as
+headings inside one running log rather than as individual files with their own frontmatter.

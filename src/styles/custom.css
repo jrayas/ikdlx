@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+/*
+  IKDLx theme.
+  Palette maps each epistemic stage to one accent, used consistently for
+  badges, callouts and the quick-reference table so the "maturity ladder"
+  reads visually, not just in prose:
+    Idea      – amber   (volatile, unproven)
+    Knowledge – teal     (settled, verified)
+    Decision  – indigo   (reasoned, contextual)
+    Lesson    – magenta  (reflective, retrospective)
+*/
+
+:root {
+	--ikdlx-idea: #b45309;
+	--ikdlx-idea-bg: #fef3c7;
+	--ikdlx-knowledge: #0f766e;
+	--ikdlx-knowledge-bg: #ccfbf1;
+	--ikdlx-decision: #4338ca;
+	--ikdlx-decision-bg: #e0e7ff;
+	--ikdlx-lesson: #a21caf;
+	--ikdlx-lesson-bg: #fae8ff;
+
+	--sl-color-accent-low: #f2e2c4;
+	--sl-color-accent: #b45309;
+	--sl-color-accent-high: #78350f;
+
+	--sl-font: 'Source Sans 3', system-ui, sans-serif;
+	--sl-font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', Menlo, monospace;
+}
+
+:root[data-theme='dark'] {
+	--ikdlx-idea: #fbbf24;
+	--ikdlx-idea-bg: #3f2d05;
+	--ikdlx-knowledge: #2dd4bf;
+	--ikdlx-knowledge-bg: #042f2b;
+	--ikdlx-decision: #818cf8;
+	--ikdlx-decision-bg: #1e1b4b;
+	--ikdlx-lesson: #e879f9;
+	--ikdlx-lesson-bg: #3b0764;
+
+	--sl-color-accent-low: #3f2d05;
+	--sl-color-accent: #fbbf24;
+	--sl-color-accent-high: #fde68a;
+	--sl-color-bg: #14110d;
+	--sl-color-bg-nav: #1a1611;
+	--sl-color-bg-sidebar: #1a1611;
+}
+
+/* Stage badge, used inline in MDX: <span class="stage-badge stage-idea">Idea</span> */
+.stage-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	padding: 0.15em 0.7em;
+	border-radius: 999px;
+	font-family: var(--sl-font);
+	font-weight: 600;
+	font-size: 0.8em;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	line-height: 1.6;
+}
+
+.stage-idea {
+	color: var(--ikdlx-idea);
+	background: var(--ikdlx-idea-bg);
+}
+
+.stage-knowledge {
+	color: var(--ikdlx-knowledge);
+	background: var(--ikdlx-knowledge-bg);
+}
+
+.stage-decision {
+	color: var(--ikdlx-decision);
+	background: var(--ikdlx-decision-bg);
+}
+
+.stage-lesson {
+	color: var(--ikdlx-lesson);
+	background: var(--ikdlx-lesson-bg);
+}
+
+/* Four-stage chain strip used on the overview page */
+.chain-strip {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin: 1.5rem 0 2rem;
+}
+
+.chain-strip a {
+	flex: 1 1 160px;
+	display: block;
+	padding: 0.9rem 1rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+	font-weight: 600;
+	border: 1px solid transparent;
+	transition: transform 0.12s ease;
+}
+
+.chain-strip a:hover {
+	transform: translateY(-2px);
+}
+
+.chain-strip .idea {
+	color: var(--ikdlx-idea);
+	background: var(--ikdlx-idea-bg);
+}
+
+.chain-strip .knowledge {
+	color: var(--ikdlx-knowledge);
+	background: var(--ikdlx-knowledge-bg);
+}
+
+.chain-strip .decision {
+	color: var(--ikdlx-decision);
+	background: var(--ikdlx-decision-bg);
+}
+
+.chain-strip .lesson {
+	color: var(--ikdlx-lesson);
+	background: var(--ikdlx-lesson-bg);
+}
+
+.chain-strip small {
+	display: block;
+	font-weight: 400;
+	opacity: 0.85;
+	margin-top: 0.15rem;
+}

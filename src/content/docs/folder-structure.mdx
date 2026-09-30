@@ -1,0 +1,63 @@
+---
+title: Folder structure & Inbox
+description: The full directory layout, and the rules for the global Inbox landing zone.
+---
+
+Domain is the top-level container. Type-folders nest inside each domain. `Inbox` and
+`_Template` stay global (domain-agnostic), since at capture time you often don't know the domain
+yet, and templates are type-based, not domain-based.
+
+```
+Vault/
+  00-Home.md
+  _Template/
+  Inbox/
+  Electrical/
+    Idea/
+    Knowledge/
+    Decision/
+    Cheatsheet/       (optional)
+    Assignment/        (optional)
+    Course/            (optional)
+      Microgrid/
+    Lesson.md
+  Electronics/
+    Idea/
+    Knowledge/
+    Decision/
+    Cheatsheet/       (optional)
+    Assignment/        (optional)
+    Course/            (optional)
+    Lesson.md
+  Mechatronics/
+    Idea/
+    Knowledge/
+    Decision/
+    Cheatsheet/       (optional)
+    Assignment/        (optional)
+    Course/            (optional)
+    Lesson.md
+```
+
+Cheatsheet, Assignment, and Course are only created inside a domain when that domain actually
+needs them. **Idea, Knowledge, Decision, and Lesson are the core four and always exist per
+domain.**
+
+All folder names are singular (`Idea`, not `Ideas`; `Assignment`, not `Assignments`) — this
+matches the `type` value used in frontmatter, so folder name and type value read identically.
+
+## Inbox
+
+A single global, domain-agnostic landing zone for anything not yet classified — a screenshot, a
+half-formed thought, a link, a voice memo transcript. No frontmatter required at capture time;
+the entire point is zero friction.
+
+:::caution[Rule: Inbox is transient]
+Sweep it periodically (daily/weekly). Each item either:
+- gets classified and moved into its proper domain + type-folder, with frontmatter added at that
+  point, or
+- gets discarded.
+
+A growing, un-swept Inbox is a signal the review habit has slipped — treat it as a warning, not
+background clutter.
+:::

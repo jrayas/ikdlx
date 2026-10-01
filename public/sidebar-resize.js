@@ -17,8 +17,8 @@ const sidebars = [
 		selector: '.right-sidebar-panel .sl-container',
 		property: '--ikdlx-right-sidebar-width',
 		storageKey: 'ikdlx-right-sidebar-width',
-		defaultWidth: 265,
-		minWidth: 200,
+		defaultWidth: 220,
+		minWidth: 160,
 		maxWidth: 360,
 	},
 ];

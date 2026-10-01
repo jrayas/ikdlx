@@ -12,6 +12,13 @@ export default defineConfig({
 			description:
 				'Idea → Knowledge → Decision → Lesson — a domain-first personal knowledge system for Obsidian.',
 			customCss: ['./src/styles/custom.css'],
+			components: {
+				Head: './src/components/Head.astro',
+				TwoColumnContent: './src/components/FadeTwoColumnContent.astro',
+			},
+			head: [
+				{ tag: 'script', attrs: { src: '/ikdlx/sidebar-resize.js', type: 'module' } },
+			],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/jrayas/ikdlx' },
 			],

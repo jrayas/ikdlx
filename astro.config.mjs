@@ -16,9 +16,7 @@ export default defineConfig({
 				Head: './src/components/Head.astro',
 				TwoColumnContent: './src/components/FadeTwoColumnContent.astro',
 			},
-			head: [
-				{ tag: 'script', attrs: { src: '/ikdlx/sidebar-resize.js', type: 'module' } },
-			],
+			head: [],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/jrayas/ikdlx' },
 			],

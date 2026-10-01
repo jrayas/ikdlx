@@ -28,13 +28,11 @@ const pageFade = fade({ duration: 200 });
 			.right-sidebar-container {
 				order: 2;
 				position: relative;
-				width: max(
-					var(--sl-sidebar-width),
-					calc(
-						var(--sl-sidebar-width) +
-							(100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2
-					)
-				);
+				margin-inline-start: auto;
+				margin-inline-end: 2rem;
+				flex: 0 0 var(--ikdlx-right-sidebar-width) !important;
+				width: var(--ikdlx-right-sidebar-width) !important;
+				max-width: var(--ikdlx-right-sidebar-width) !important;
 			}
 
 			.right-sidebar {
@@ -42,7 +40,7 @@ const pageFade = fade({ duration: 200 });
 				top: 0;
 				border-inline-start: 1px solid var(--sl-color-hairline);
 				padding-top: var(--sl-nav-height);
-				width: 100%;
+				width: var(--ikdlx-right-sidebar-width) !important;
 				height: 100vh;
 				overflow-y: auto;
 				scrollbar-width: none;

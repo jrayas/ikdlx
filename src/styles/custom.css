@@ -27,8 +27,8 @@
 
 	--sl-font: 'Source Sans 3', system-ui, sans-serif;
 	--sl-font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', Menlo, monospace;
-	--ikdlx-left-sidebar-width: 18.75rem;
-	--ikdlx-right-sidebar-width: 13.75rem;
+	--ikdlx-left-sidebar-width: 15rem;
+	--ikdlx-right-sidebar-width: 15rem;
 	--sl-sidebar-width: var(--ikdlx-left-sidebar-width);
 }
 
@@ -147,16 +147,32 @@
 }
 
 @media (min-width: 72rem) {
+	:root {
+		--sl-content-width: 850px;
+		--sl-content-pad-x: 1rem;
+	}
+
+	.right-sidebar-panel {
+		padding: 1rem var(--sl-sidebar-pad-x);
+	}
+
+	.right-sidebar-panel,
 	.right-sidebar-panel .sl-container {
 		position: relative;
-		width: var(--ikdlx-right-sidebar-width);
-		max-width: min(
-			var(--ikdlx-right-sidebar-width),
-			calc(
-				(100vw - var(--sl-sidebar-width) - 2 * var(--sl-content-pad-x) - 2 * var(--sl-sidebar-pad-x)) *
-					0.35
-			)
-		);
+		width: var(--ikdlx-right-sidebar-width) !important;
+		max-width: var(--ikdlx-right-sidebar-width) !important;
+		min-width: var(--ikdlx-right-sidebar-width) !important;
+	}
+
+	.right-sidebar-container,
+	.right-sidebar {
+		width: var(--ikdlx-right-sidebar-width) !important;
+		max-width: var(--ikdlx-right-sidebar-width) !important;
+		min-width: var(--ikdlx-right-sidebar-width) !important;
+	}
+
+	.right-sidebar-container {
+		flex: 0 0 var(--ikdlx-right-sidebar-width) !important;
 	}
 
 	.ikdlx-left-sidebar-resizer {
@@ -170,6 +186,8 @@
 		background: transparent;
 		cursor: col-resize;
 		touch-action: none;
+		left: var(--sl-sidebar-width);
+		transform: translateX(-50%);
 	}
 
 	.ikdlx-left-sidebar-resizer::before {
@@ -178,27 +196,14 @@
 		left: 50%;
 		width: 2px;
 		border-radius: 999px;
-		background: transparent;
+		background: var(--sl-color-hairline);
 		content: '';
 		transform: translateX(-50%);
-	}
-
-	.ikdlx-left-sidebar-resizer::before {
-		background: var(--sl-color-hairline);
 		transition: none;
-	}
-
-	.ikdlx-left-sidebar-resizer:focus-visible {
-		outline: none;
 	}
 
 	.ikdlx-left-sidebar-resizer:focus-visible {
 		outline: 2px solid var(--sl-color-text-accent);
 		outline-offset: -2px;
-	}
-
-	.ikdlx-left-sidebar-resizer {
-		left: var(--sl-sidebar-width);
-		transform: translateX(-50%);
 	}
 }

@@ -27,8 +27,8 @@
 
 	--sl-font: 'Source Sans 3', system-ui, sans-serif;
 	--sl-font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', Menlo, monospace;
-	--ikdlx-left-sidebar-width: 15rem;
-	--ikdlx-right-sidebar-width: 15rem;
+	--ikdlx-left-sidebar-width: 18rem;
+	--ikdlx-right-sidebar-width: 18rem;
 	--sl-sidebar-width: var(--ikdlx-left-sidebar-width);
 }
 
